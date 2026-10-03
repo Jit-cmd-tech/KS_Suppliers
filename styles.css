@@ -564,6 +564,27 @@ h2 {
     transform 0.3s,
     box-shadow 0.3s;
 }
+.product-card-tools {
+  position: relative;
+  overflow: hidden;
+  background: url("https://images.unsplash.com/photo-1555963966-b7ae5402e60f?auto=format&fit=crop&w=800&q=80")
+    center / cover no-repeat;
+}
+.product-card-tools::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(255, 255, 255, 0.78);
+}
+.product-card-tools .product-image,
+.product-card-tools .product-body {
+  position: relative;
+  z-index: 1;
+}
+.product-card-tools .product-body {
+  background: transparent;
+}
 .product-card:hover {
   transform: translateY(-7px);
   box-shadow: var(--shadow);
